@@ -1,0 +1,23 @@
+
+<div class="container">
+   
+    <br>
+    <p>{{currentdate | date:'dd/MM/yyyy hh:mm:ss a':'+0530'}}</p><br>
+<input type="text" placeholder="Search..." class="form-control" [(ngModel)]="txtsearch">
+<br>
+<table  class="table table-striped">
+    <tr class="thead-light">
+    <th (click)="funorder('fname')" style="cursor:pointer"> first Neme <i class="fa fa-angle-down" style="font-size:18px;font-weight: bold;"></i></th>
+    <th (click)="funorder('lname')" style="cursor:pointer">last Neme <i class="fa fa-angle-down" style="font-size:18px;font-weight: bold;"></i></th>
+    <th (click)="funorder('eid')" style="cursor:pointer">email Id <i class="fa fa-angle-down" style="font-size:18px;font-weight: bold;"></i></th>
+</tr>
+<tr *ngFor="let alldata of auditData |filter:txtsearch |orderBy:colname:ord| paginate:{itemsPerPage:3,currentPage:pno}">
+<td>{{alldata.firstname}}</td>
+<td>{{alldata.lastname}}</td>
+<td>{{alldata.emailid}}</td>
+</tr>
+</table>
+
+</div>
+
+<pagination-controls (pageChange)="pno=$event"></pagination-controls>

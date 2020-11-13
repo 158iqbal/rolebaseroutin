@@ -1,0 +1,46 @@
+<div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+    <form class="border rounded shadow p-3 mt-5 bg-white ">
+        <div class="form-group ">
+          <label for="exampleInputEmail1">First Name</label>
+          <input type="text" class="form-control form-control-sm" id="firstname" aria-describedby="emailHelp">
+          
+        </div>
+        <div class="form-group ">
+          <label for="exampleInputPassword1">Last Name</label>
+          <input type="text" class="form-control form-control-sm" id="lastname">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Role</label>
+            <select class="form-control" id="typeOfRole">
+              <option>--select--</option>
+              <option>NORMALUSER</option>
+              <option>AUDITUSER</option>
+              
+            </select>
+          </div>
+        
+
+        <div class="form-group ">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control form-control-sm" id="emailid" aria-describedby="emailHelp">
+            
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control form-control-sm" id="pw">
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputPassword1">Confirm Password</label>
+            <input type="password" class="form-control form-control-sm" id="Confirmpw">
+          </div>
+
+        <button type="submit" class="btn btn-primary" (click)="saveMemberInfo()">Submit</button>
+      </form>
+    </div>
+
+    <div class="col-sm-3"></div>
+    </div>
